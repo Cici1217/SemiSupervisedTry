@@ -1,0 +1,1801 @@
+#### 全监督，意图识别，无任何调优，冻结参数，调全连接层：
+
+(bert_env) cq@hello-PowerEdge-T640:~/snap/snapd-desktop-integration/test/airProj$ python [newCode.py](http://newCode.py)
+
+模型数据已经加载完成，预训练评估
+
+2024-01-27 14:54:38.460917
+
+Temp Accuracy: 0.005
+
+Temp Accuracy: 0.0025
+
+Temp Accuracy: 0.0016666666666666668
+
+Temp Accuracy: 0.005
+
+Accuracy: 0.005
+
+2024-01-27 14:54:41.994827
+
+预测试已完成,现在开始模型训练。
+
+2024-01-27 14:54:41.995694
+
+batch:0 loss:2.36479
+
+batch:1 loss:2.38019
+
+batch:2 loss:2.35490
+
+batch:3 loss:2.30922
+
+batch:4 loss:2.32932
+
+batch:5 loss:2.32958
+
+batch:6 loss:2.30828
+
+batch:7 loss:2.31460
+
+batch:8 loss:2.29472
+
+batch:9 loss:2.26781
+
+batch:10 loss:2.28273
+
+batch:11 loss:2.26380
+
+batch:12 loss:2.25280
+
+batch:13 loss:2.24987
+
+batch:14 loss:2.22083
+
+batch:15 loss:2.23382
+
+batch:16 loss:2.20697
+
+batch:17 loss:2.19084
+
+batch:18 loss:2.18753
+
+batch:19 loss:2.18541
+
+batch:20 loss:2.17882
+
+batch:21 loss:2.15428
+
+batch:22 loss:2.13964
+
+batch:23 loss:2.14531
+
+epoch:0 loss:2.14531
+
+batch:0 loss:2.12958
+
+batch:1 loss:2.12474
+
+batch:2 loss:2.09913
+
+batch:3 loss:2.08628
+
+batch:4 loss:2.09595
+
+batch:5 loss:2.06530
+
+batch:6 loss:2.05393
+
+batch:7 loss:2.06143
+
+batch:8 loss:2.05524
+
+batch:9 loss:2.04772
+
+batch:10 loss:2.02173
+
+batch:11 loss:2.03099
+
+batch:12 loss:2.01827
+
+batch:13 loss:2.00746
+
+batch:14 loss:1.99589
+
+batch:15 loss:1.98672
+
+batch:16 loss:1.97444
+
+batch:17 loss:1.97047
+
+batch:18 loss:1.95847
+
+batch:19 loss:1.93718
+
+batch:20 loss:1.95746
+
+batch:21 loss:1.94544
+
+batch:22 loss:1.93359
+
+batch:23 loss:1.89609
+
+epoch:1 loss:1.89609
+
+batch:0 loss:1.89790
+
+batch:1 loss:1.87821
+
+batch:2 loss:1.87552
+
+batch:3 loss:1.88703
+
+batch:4 loss:1.87025
+
+batch:5 loss:1.83845
+
+batch:6 loss:1.83720
+
+batch:7 loss:1.82156
+
+batch:8 loss:1.82565
+
+batch:9 loss:1.84330
+
+batch:10 loss:1.78333
+
+batch:11 loss:1.80120
+
+batch:12 loss:1.81338
+
+batch:13 loss:1.78721
+
+batch:14 loss:1.78697
+
+batch:15 loss:1.75973
+
+batch:16 loss:1.76440
+
+batch:17 loss:1.75234
+
+batch:18 loss:1.75591
+
+batch:19 loss:1.72359
+
+batch:20 loss:1.75684
+
+batch:21 loss:1.73092
+
+batch:22 loss:1.73114
+
+batch:23 loss:1.68385
+
+epoch:2 loss:1.68385
+
+batch:0 loss:1.71764
+
+batch:1 loss:1.66811
+
+batch:2 loss:1.67115
+
+batch:3 loss:1.68979
+
+batch:4 loss:1.65374
+
+batch:5 loss:1.65047
+
+batch:6 loss:1.62987
+
+batch:7 loss:1.62346
+
+batch:8 loss:1.63085
+
+batch:9 loss:1.66433
+
+batch:10 loss:1.58668
+
+batch:11 loss:1.61606
+
+batch:12 loss:1.63143
+
+batch:13 loss:1.57995
+
+batch:14 loss:1.62840
+
+batch:15 loss:1.56245
+
+batch:16 loss:1.57578
+
+batch:17 loss:1.58989
+
+batch:18 loss:1.57795
+
+batch:19 loss:1.51690
+
+batch:20 loss:1.60051
+
+batch:21 loss:1.55182
+
+batch:22 loss:1.55904
+
+batch:23 loss:1.50797
+
+epoch:3 loss:1.50797
+
+batch:0 loss:1.54507
+
+batch:1 loss:1.48099
+
+batch:2 loss:1.48413
+
+batch:3 loss:1.55821
+
+batch:4 loss:1.50063
+
+batch:5 loss:1.46928
+
+batch:6 loss:1.47570
+
+batch:7 loss:1.45585
+
+batch:8 loss:1.46449
+
+batch:9 loss:1.50622
+
+batch:10 loss:1.39664
+
+batch:11 loss:1.46159
+
+batch:12 loss:1.47739
+
+batch:13 loss:1.43001
+
+batch:14 loss:1.47658
+
+batch:15 loss:1.38983
+
+batch:16 loss:1.41615
+
+batch:17 loss:1.42756
+
+batch:18 loss:1.43552
+
+batch:19 loss:1.36453
+
+batch:20 loss:1.45006
+
+batch:21 loss:1.41542
+
+batch:22 loss:1.43705
+
+batch:23 loss:1.36466
+
+epoch:4 loss:1.36466
+
+2024-01-27 14:56:22.770386
+
+新模型准确率验证
+
+2024-01-27 14:56:22.770429
+
+tensor([ True, False,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True, False,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True, False, False, False,
+
+  True,  True, False,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True, False,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True, False,  True,  True,  True,  True,  True,  True, False,
+
+  True, False,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True, False,  True,  True,  True,  True,
+
+  True,  True,  True,  True, False, False, False,  True,  True,  True,
+
+  True,  True, False, False,  True, False,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True, False,
+
+  True,  True, False, False,  True, False,  True,  True,  True,  True,
+
+  True, False, False,  True,  True,  True,  True,  True,  True,  True])
+
+Temp Accuracy: 0.885
+
+tensor([ True,  True,  True,  True,  True, False,  True,  True,  True,  True,
+
+  True, False,  True,  True,  True,  True,  True,  True,  True, False,
+
+  False,  True,  True,  True,  True,  True,  True,  True,  True, False,
+
+  False, False,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True, False,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True, False,
+
+  False,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True, False,  True,  True,  True,  True, False, False, False,
+
+  False, False,  True, False, False, False,  True,  True,  True,  True,
+
+    True,  True,  True,  True, False,  True,  True, False,  True,  True,
+
+  False, False, False,  True,  True,  True,  True,  True, False, False,
+
+    True,  True,  True, False,  True,  True,  True,  True, False,  True,
+
+  False,  True,  True,  True, False,  True, False, False,  True, False,
+
+    True, False,  True,  True, False,  True, False,  True, False,  True,
+
+    True, False,  True, False,  True, False, False,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True, False,
+
+  False, False,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True, False,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True, False,  True])
+
+Temp Accuracy: 0.8275
+
+tensor([False, False,  True,  True,  True,  True,  True,  True,  True, False,
+
+  True, False,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True, False,  True,  True, False, False, False, False, False,
+
+  False,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True, False,  True,  True,  True,  True,
+
+    True,  True, False, False,  True, False,  True,  True,  True,  True,
+
+  False,  True, False,  True,  True, False,  True,  True, False, False,
+
+    True, False,  True,  True,  True,  True,  True,  True,  True, False,
+
+    True, False, False,  True, False, False, False, False,  True,  True,
+
+    True, False,  True,  True, False,  True, False,  True, False, False,
+
+  False, False,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True, False, False, False,  True,  True,  True,
+
+  False, False, False, False, False,  True, False,  True,  True,  True,
+
+  False,  True,  True, False, False,  True, False,  True,  True,  True,
+
+    True,  True,  True, False,  True, False, False, False, False, False,
+
+  False,  True,  True,  True,  True,  True, False,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True, False,
+
+  False,  True, False, False,  True,  True,  True,  True,  True, False,
+
+    True,  True, False, False,  True,  True,  True,  True, False,  True])
+
+Temp Accuracy: 0.7783333333333333
+
+tensor([False,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True, False, False,  True, False, False,  True,  True,  True,
+
+  True,  True,  True,  True, False, False,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True, False,
+
+  False, False,  True,  True,  True,  True,  True,  True,  True, False,
+
+  False, False, False, False,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True, False, False, False,  True, False,  True,  True,
+
+    True, False, False, False,  True,  True,  True,  True,  True, False,
+
+    True, False, False, False, False, False,  True,  True, False,  True,
+
+    True,  True,  True, False,  True,  True,  True,  True,  True, False,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True, False,
+
+    True,  True,  True,  True,  True, False, False,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  False,  True,  True,  True,  True,  True,  True,  True,  True,  True])
+
+Temp Accuracy: 0.79
+
+Accuracy: 0.79
+
+2024-01-27 14:56:25.598393
+
+保存模型
+
+
+
+
+
+#### 不冻结bert的参数，不调学习率：
+
+(bert_env) cq@hello-PowerEdge-T640:~/snap/snapd-desktop-integration/test/airProj$ python [newCode.py](http://newCode.py)
+
+模型数据已经加载完成，预训练评估
+
+2024-01-27 14:59:48.110325
+
+Temp Accuracy: 0.025
+
+Temp Accuracy: 0.0225
+
+Temp Accuracy: 0.021666666666666667
+
+Temp Accuracy: 0.01875
+
+Accuracy: 0.01875
+
+2024-01-27 14:59:51.703022
+
+预测试已完成,现在开始模型训练。
+
+2024-01-27 14:59:51.703842
+
+batch:0 loss:1.98038
+
+batch:1 loss:1.62488
+
+batch:2 loss:1.26032
+
+batch:3 loss:1.14616
+
+batch:4 loss:0.92216
+
+batch:5 loss:0.89929
+
+batch:6 loss:0.90169
+
+batch:7 loss:0.73472
+
+batch:8 loss:0.78129
+
+batch:9 loss:0.92798
+
+batch:10 loss:0.66929
+
+batch:11 loss:0.66062
+
+batch:12 loss:0.68098
+
+batch:13 loss:0.59992
+
+batch:14 loss:0.69338
+
+batch:15 loss:0.46619
+
+batch:16 loss:0.39560
+
+batch:17 loss:0.49240
+
+batch:18 loss:0.39708
+
+batch:19 loss:0.31720
+
+batch:20 loss:0.38209
+
+batch:21 loss:0.29997
+
+batch:22 loss:0.29144
+
+batch:23 loss:0.19259
+
+epoch:0 loss:0.19259
+
+batch:0 loss:0.30876
+
+batch:1 loss:0.28871
+
+batch:2 loss:0.20308
+
+batch:3 loss:0.28232
+
+batch:4 loss:0.18383
+
+batch:5 loss:0.16039
+
+batch:6 loss:0.13628
+
+batch:7 loss:0.14098
+
+batch:8 loss:0.12473
+
+batch:9 loss:0.16845
+
+batch:10 loss:0.13738
+
+batch:11 loss:0.05104
+
+batch:12 loss:0.08644
+
+batch:13 loss:0.11041
+
+batch:14 loss:0.15592
+
+batch:15 loss:0.04784
+
+batch:16 loss:0.03287
+
+batch:17 loss:0.06691
+
+batch:18 loss:0.06103
+
+batch:19 loss:0.05781
+
+batch:20 loss:0.03621
+
+batch:21 loss:0.03802
+
+batch:22 loss:0.04716
+
+batch:23 loss:0.02188
+
+epoch:1 loss:0.02188
+
+batch:0 loss:0.04312
+
+batch:1 loss:0.05100
+
+batch:2 loss:0.01734
+
+batch:3 loss:0.05177
+
+batch:4 loss:0.03932
+
+batch:5 loss:0.02200
+
+batch:6 loss:0.01987
+
+batch:7 loss:0.03121
+
+batch:8 loss:0.02103
+
+batch:9 loss:0.03520
+
+batch:10 loss:0.03051
+
+batch:11 loss:0.00795
+
+batch:12 loss:0.03121
+
+batch:13 loss:0.01842
+
+batch:14 loss:0.08080
+
+batch:15 loss:0.00803
+
+batch:16 loss:0.02136
+
+batch:17 loss:0.03858
+
+batch:18 loss:0.02884
+
+batch:19 loss:0.02557
+
+batch:20 loss:0.01273
+
+batch:21 loss:0.02041
+
+batch:22 loss:0.01694
+
+batch:23 loss:0.00615
+
+epoch:2 loss:0.00615
+
+batch:0 loss:0.02444
+
+batch:1 loss:0.01125
+
+batch:2 loss:0.00689
+
+batch:3 loss:0.01235
+
+batch:4 loss:0.01620
+
+batch:5 loss:0.00650
+
+batch:6 loss:0.00820
+
+batch:7 loss:0.02021
+
+batch:8 loss:0.01364
+
+batch:9 loss:0.02046
+
+batch:10 loss:0.01896
+
+batch:11 loss:0.00636
+
+batch:12 loss:0.00863
+
+batch:13 loss:0.01534
+
+batch:14 loss:0.05754
+
+batch:15 loss:0.00574
+
+batch:16 loss:0.00387
+
+batch:17 loss:0.02443
+
+batch:18 loss:0.00723
+
+batch:19 loss:0.01391
+
+batch:20 loss:0.00548
+
+batch:21 loss:0.00488
+
+batch:22 loss:0.00541
+
+batch:23 loss:0.00342
+
+epoch:3 loss:0.00342
+
+batch:0 loss:0.00778
+
+batch:1 loss:0.03178
+
+batch:2 loss:0.00366
+
+batch:3 loss:0.03379
+
+batch:4 loss:0.01077
+
+batch:5 loss:0.00382
+
+batch:6 loss:0.00386
+
+batch:7 loss:0.00320
+
+batch:8 loss:0.00513
+
+batch:9 loss:0.00774
+
+batch:10 loss:0.01265
+
+batch:11 loss:0.00384
+
+batch:12 loss:0.00416
+
+batch:13 loss:0.00605
+
+batch:14 loss:0.04076
+
+batch:15 loss:0.00376
+
+batch:16 loss:0.00345
+
+batch:17 loss:0.02076
+
+batch:18 loss:0.02338
+
+batch:19 loss:0.00690
+
+batch:20 loss:0.00376
+
+batch:21 loss:0.00574
+
+batch:22 loss:0.00365
+
+batch:23 loss:0.00263
+
+epoch:4 loss:0.00263
+
+2024-01-27 15:04:36.874826
+
+新模型准确率验证
+
+2024-01-27 15:04:36.874880
+
+tensor([True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True])
+
+Temp Accuracy: 1.0
+
+tensor([True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True])
+
+Temp Accuracy: 1.0
+
+tensor([True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True])
+
+Temp Accuracy: 1.0
+
+tensor([ True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True, False, False, False,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  False,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True])
+
+Temp Accuracy: 0.995
+
+Accuracy: 0.995
+
+2024-01-27 15:04:39.786841
+
+保存模型
+
+
+
+
+
+#### 调节学习率，冻结参数：
+
+(bert_env) cq@hello-PowerEdge-T640:~/snap/snapd-desktop-integration/test/airProj$ python [newCode.py](http://newCode.py)
+
+模型数据已经加载完成，预训练评估
+
+2024-01-27 15:15:41.358792
+
+Temp Accuracy: 0.035
+
+Temp Accuracy: 0.035
+
+Temp Accuracy: 0.05333333333333334
+
+Temp Accuracy: 0.045
+
+Accuracy: 0.045
+
+2024-01-27 15:15:45.031448
+
+预测试已完成,现在开始模型训练。
+
+2024-01-27 15:15:45.032373
+
+batch:0 loss:2.34669
+
+batch:1 loss:2.15868
+
+batch:2 loss:1.94503
+
+batch:3 loss:1.81177
+
+batch:4 loss:1.59575
+
+batch:5 loss:1.43663
+
+batch:6 loss:1.31672
+
+batch:7 loss:1.16345
+
+batch:8 loss:1.09146
+
+batch:9 loss:1.13047
+
+batch:10 loss:0.88339
+
+batch:11 loss:0.92470
+
+batch:12 loss:0.98357
+
+batch:13 loss:0.84074
+
+batch:14 loss:1.02188
+
+batch:15 loss:0.78719
+
+batch:16 loss:0.82431
+
+batch:17 loss:0.99619
+
+batch:18 loss:0.90344
+
+batch:19 loss:0.76831
+
+batch:20 loss:1.01559
+
+batch:21 loss:0.89818
+
+batch:22 loss:0.93734
+
+batch:23 loss:0.78060
+
+epoch:0 loss:0.78060
+
+batch:0 loss:0.96460
+
+batch:1 loss:0.77986
+
+batch:2 loss:0.77432
+
+batch:3 loss:1.05777
+
+batch:4 loss:0.86484
+
+batch:5 loss:0.81257
+
+batch:6 loss:0.81946
+
+batch:7 loss:0.72620
+
+batch:8 loss:0.76005
+
+batch:9 loss:0.95252
+
+batch:10 loss:0.74674
+
+batch:11 loss:0.74817
+
+batch:12 loss:0.84230
+
+batch:13 loss:0.80296
+
+batch:14 loss:0.97365
+
+batch:15 loss:0.70481
+
+batch:16 loss:0.71774
+
+batch:17 loss:0.85355
+
+batch:18 loss:0.73753
+
+batch:19 loss:0.64653
+
+batch:20 loss:0.82136
+
+batch:21 loss:0.73359
+
+batch:22 loss:0.76054
+
+batch:23 loss:0.63107
+
+epoch:1 loss:0.63107
+
+batch:0 loss:0.80343
+
+batch:1 loss:0.70089
+
+batch:2 loss:0.67333
+
+batch:3 loss:0.86971
+
+batch:4 loss:0.73217
+
+batch:5 loss:0.70192
+
+batch:6 loss:0.69444
+
+batch:7 loss:0.61836
+
+batch:8 loss:0.65212
+
+batch:9 loss:0.80856
+
+batch:10 loss:0.65168
+
+batch:11 loss:0.65148
+
+batch:12 loss:0.70418
+
+batch:13 loss:0.65683
+
+batch:14 loss:0.84111
+
+batch:15 loss:0.59922
+
+batch:16 loss:0.63540
+
+batch:17 loss:0.74232
+
+batch:18 loss:0.65497
+
+batch:19 loss:0.57076
+
+batch:20 loss:0.72573
+
+batch:21 loss:0.64274
+
+batch:22 loss:0.69052
+
+batch:23 loss:0.53011
+
+epoch:2 loss:0.53011
+
+batch:0 loss:0.69694
+
+batch:1 loss:0.62026
+
+batch:2 loss:0.59348
+
+batch:3 loss:0.77249
+
+batch:4 loss:0.62910
+
+batch:5 loss:0.61214
+
+batch:6 loss:0.63033
+
+batch:7 loss:0.53431
+
+batch:8 loss:0.57943
+
+batch:9 loss:0.73938
+
+batch:10 loss:0.58244
+
+batch:11 loss:0.57882
+
+batch:12 loss:0.62440
+
+batch:13 loss:0.58337
+
+batch:14 loss:0.75259
+
+batch:15 loss:0.53996
+
+batch:16 loss:0.56621
+
+batch:17 loss:0.65546
+
+batch:18 loss:0.57889
+
+batch:19 loss:0.51108
+
+batch:20 loss:0.66157
+
+batch:21 loss:0.56567
+
+batch:22 loss:0.60615
+
+batch:23 loss:0.46502
+
+epoch:3 loss:0.46502
+
+batch:0 loss:0.63888
+
+batch:1 loss:0.56395
+
+batch:2 loss:0.51519
+
+batch:3 loss:0.71475
+
+batch:4 loss:0.56467
+
+batch:5 loss:0.54622
+
+batch:6 loss:0.55774
+
+batch:7 loss:0.47949
+
+batch:8 loss:0.50731
+
+batch:9 loss:0.66984
+
+batch:10 loss:0.55410
+
+batch:11 loss:0.52078
+
+batch:12 loss:0.56111
+
+batch:13 loss:0.54583
+
+batch:14 loss:0.69032
+
+batch:15 loss:0.48747
+
+batch:16 loss:0.50834
+
+batch:17 loss:0.60299
+
+batch:18 loss:0.53615
+
+batch:19 loss:0.46275
+
+batch:20 loss:0.61289
+
+batch:21 loss:0.50193
+
+batch:22 loss:0.54037
+
+batch:23 loss:0.40091
+
+epoch:4 loss:0.40091
+
+2024-01-27 15:17:25.084379
+
+新模型准确率验证
+
+2024-01-27 15:17:25.084415
+
+tensor([ True, False,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True, False, False,
+
+  True,  True, False,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True, False,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True, False,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True, False,  True,  True,  True,  True,
+
+  True,  True,  True,  True, False, False, False,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True, False,
+
+  True,  True, False, False,  True, False,  True,  True,  True,  True,
+
+  True, False, False,  True,  True,  True,  True,  True,  True,  True])
+
+Temp Accuracy: 0.92
+
+tensor([ True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True, False,  True,  True,  True,  True,  True,  True,  True, False,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True, False,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  False,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True, False,  True,  True,  True,  True,  True,  True, False,
+
+  False, False,  True, False, False, False,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True, False,  True,  True,
+
+  False,  True, False,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True, False,  True,
+
+    True,  True,  True,  True, False,  True,  True,  True,  True,  True,
+
+    True, False,  True,  True, False,  True, False,  True, False,  True,
+
+    True, False,  True,  True,  True, False, False,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True, False,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True, False,  True])
+
+Temp Accuracy: 0.8975
+
+tensor([ True, False,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True, False,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True, False,  True,  True,  True,  True,
+
+  True,  True, False, False,  True, False,  True,  True,  True,  True,
+
+  False,  True,  True,  True,  True, False,  True,  True, False, False,
+
+    True, False,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True, False,  True,  True,  True,  True,  True,  True,  True,
+
+    True, False,  True,  True, False,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True, False,  True, False,  True,  True,  True,
+
+  False, False, False, False, False,  True, False,  True,  True,  True,
+
+  False,  True,  True, False, False,  True, False,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True, False, False, False,
+
+  False,  True,  True,  True,  True,  True, False,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True, False,
+
+    True,  True, False, False,  True,  True,  True,  True,  True, False,
+
+    True,  True,  True,  True,  True,  True,  True,  True, False,  True])
+
+Temp Accuracy: 0.8716666666666667
+
+tensor([False,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True, False,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  False,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True, False,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True, False, False, False,  True,  True,  True,  True,
+
+    True, False, False, False,  True,  True,  True,  True,  True, False,
+
+    True,  True, False,  True, False, False,  True,  True, False,  True,
+
+    True,  True,  True, False,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True, False,
+
+    True,  True,  True,  True,  True, False, False,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  False,  True,  True,  True,  True,  True,  True,  True,  True,  True])
+
+Temp Accuracy: 0.87875
+
+Accuracy: 0.87875
+
+2024-01-27 15:17:27.941216
+
+保存模型
+
+
+
+#### 调节学习率，不冻结参数：
+
+(bert_env) cq@hello-PowerEdge-T640:~/snap/snapd-desktop-integration/test/airProj$ python [newCode.py](http://newCode.py)
+
+模型数据已经加载完成，预训练评估
+
+2024-01-27 15:09:19.978043
+
+Temp Accuracy: 0.015
+
+Temp Accuracy: 0.01
+
+Temp Accuracy: 0.006666666666666667
+
+Temp Accuracy: 0.005
+
+Accuracy: 0.005
+
+2024-01-27 15:09:23.419456
+
+预测试已完成,现在开始模型训练。
+
+2024-01-27 15:09:23.420361
+
+batch:0 loss:2.38679
+
+batch:1 loss:1.97126
+
+batch:2 loss:1.60902
+
+batch:3 loss:1.40122
+
+batch:4 loss:1.08651
+
+batch:5 loss:0.92426
+
+batch:6 loss:0.86845
+
+batch:7 loss:0.75928
+
+batch:8 loss:0.85306
+
+batch:9 loss:1.06606
+
+batch:10 loss:0.69968
+
+batch:11 loss:0.77115
+
+batch:12 loss:0.81171
+
+batch:13 loss:0.71535
+
+batch:14 loss:0.84344
+
+batch:15 loss:0.60668
+
+batch:16 loss:0.61516
+
+batch:17 loss:0.69520
+
+batch:18 loss:0.58458
+
+batch:19 loss:0.46955
+
+batch:20 loss:0.60405
+
+batch:21 loss:0.51551
+
+batch:22 loss:0.46638
+
+batch:23 loss:0.33049
+
+epoch:0 loss:0.33049
+
+batch:0 loss:0.49600
+
+batch:1 loss:0.40768
+
+batch:2 loss:0.35434
+
+batch:3 loss:0.45347
+
+batch:4 loss:0.33079
+
+batch:5 loss:0.31594
+
+batch:6 loss:0.27925
+
+batch:7 loss:0.24859
+
+batch:8 loss:0.23669
+
+batch:9 loss:0.32555
+
+batch:10 loss:0.25976
+
+batch:11 loss:0.18875
+
+batch:12 loss:0.17758
+
+batch:13 loss:0.22202
+
+batch:14 loss:0.30796
+
+batch:15 loss:0.14299
+
+batch:16 loss:0.12611
+
+batch:17 loss:0.15438
+
+batch:18 loss:0.16682
+
+batch:19 loss:0.12516
+
+batch:20 loss:0.11484
+
+batch:21 loss:0.12595
+
+batch:22 loss:0.12402
+
+batch:23 loss:0.08032
+
+epoch:1 loss:0.08032
+
+batch:0 loss:0.13897
+
+batch:1 loss:0.09975
+
+batch:2 loss:0.07955
+
+batch:3 loss:0.08802
+
+batch:4 loss:0.06711
+
+batch:5 loss:0.06105
+
+batch:6 loss:0.05525
+
+batch:7 loss:0.05720
+
+batch:8 loss:0.04409
+
+batch:9 loss:0.07957
+
+batch:10 loss:0.07338
+
+batch:11 loss:0.01857
+
+batch:12 loss:0.05272
+
+batch:13 loss:0.08348
+
+batch:14 loss:0.09241
+
+batch:15 loss:0.01835
+
+batch:16 loss:0.01353
+
+batch:17 loss:0.02161
+
+batch:18 loss:0.03385
+
+batch:19 loss:0.04710
+
+batch:20 loss:0.02738
+
+batch:21 loss:0.04336
+
+batch:22 loss:0.04200
+
+batch:23 loss:0.01289
+
+epoch:2 loss:0.01289
+
+batch:0 loss:0.05334
+
+batch:1 loss:0.02020
+
+batch:2 loss:0.00864
+
+batch:3 loss:0.05618
+
+batch:4 loss:0.01642
+
+batch:5 loss:0.01493
+
+batch:6 loss:0.01456
+
+batch:7 loss:0.01024
+
+batch:8 loss:0.01466
+
+batch:9 loss:0.01777
+
+batch:10 loss:0.02097
+
+batch:11 loss:0.00628
+
+batch:12 loss:0.01369
+
+batch:13 loss:0.04173
+
+batch:14 loss:0.06064
+
+batch:15 loss:0.00599
+
+batch:16 loss:0.00538
+
+batch:17 loss:0.02483
+
+batch:18 loss:0.01452
+
+batch:19 loss:0.02783
+
+batch:20 loss:0.00877
+
+batch:21 loss:0.01246
+
+batch:22 loss:0.01598
+
+batch:23 loss:0.00511
+
+epoch:3 loss:0.00511
+
+batch:0 loss:0.02489
+
+batch:1 loss:0.01781
+
+batch:2 loss:0.00371
+
+batch:3 loss:0.01312
+
+batch:4 loss:0.00782
+
+batch:5 loss:0.00760
+
+batch:6 loss:0.00500
+
+batch:7 loss:0.00444
+
+batch:8 loss:0.00458
+
+batch:9 loss:0.01632
+
+batch:10 loss:0.02284
+
+batch:11 loss:0.00408
+
+batch:12 loss:0.00397
+
+batch:13 loss:0.00387
+
+batch:14 loss:0.05568
+
+batch:15 loss:0.00270
+
+batch:16 loss:0.00392
+
+batch:17 loss:0.00466
+
+batch:18 loss:0.01241
+
+batch:19 loss:0.00595
+
+batch:20 loss:0.00321
+
+batch:21 loss:0.02050
+
+batch:22 loss:0.00739
+
+batch:23 loss:0.00256
+
+epoch:4 loss:0.00256
+
+2024-01-27 15:14:07.385832
+
+新模型准确率验证
+
+2024-01-27 15:14:07.385867
+
+tensor([ True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True, False,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True])
+
+Temp Accuracy: 0.995
+
+tensor([True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True, True, True, True, True,
+
+  True, True, True, True, True, True, True, True])
+
+Temp Accuracy: 0.9975
+
+tensor([ True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True, False, False,  True,  True,  True, False, False, False,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True])
+
+Temp Accuracy: 0.99
+
+tensor([ True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True, False, False, False,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+  False,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True,
+
+    True,  True,  True,  True,  True,  True,  True,  True,  True,  True])
+
+Temp Accuracy: 0.9875
+
+Accuracy: 0.9875
+
+2024-01-27 15:14:10.168369
+
+保存模型
