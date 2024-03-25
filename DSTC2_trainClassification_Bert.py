@@ -25,31 +25,38 @@ from transformers import DistilBertTokenizer, DistilBertModel
 # 存储训练出来的模型，现在是空的
 model_path = "model"
 
+
 # 读取数据的类
-class ATISDataset(Dataset):
-    def __init__(self, mode, trainNumber=4800, testNumber=800):
-        super(ATISDataset, self).__init__()
+class DSTC2Dataset(Dataset):
+    def __init__(self, mode, trainNumber, testNumber):
+        super(DSTC2Dataset, self).__init__()
         map0 = {
-            'atis_flight': 0,
-            'atis_flight_time': 1,
-            'atis_airfare': 2,
-            'atis_aircraft': 3,
-            'atis_ground_service': 4,
-            'atis_airline': 5,
-            'atis_abbreviation': 6,
-            'atis_quantity': 7
+            'inform': 0,
+            'request': 1,
+            'thankyou': 2,
+            'repeat': 3,
+            'reqalts': 4,
+            'affirm': 5,
+            'negate': 6,
+            'hello': 7,
+            'bye': 8,
+            'restart': 9,
+            'confirm': 10,
+            'ack': 11,
+            'deny': 12,
+            'null()': 13
         }
 
-        file_path = "archive/"
+        file_path = "file/DSTC2_csv/"
         if mode == "train":
-            file_path += 'atis_intents_train.csv'
+            file_path += 'train_data.csv'
         if mode == "test":
-            file_path += 'atis_intents_test.csv'
+            file_path += 'test_data.csv'
         string_array = []
         with open(file_path, 'r') as file:
             csv_reader = csv.reader(file)
             for row in csv_reader:
-                if len(string_array) == 4800:
+                if len(string_array) == trainNumber:
                     break
                 string_array.append(row)
 
@@ -58,8 +65,6 @@ class ATISDataset(Dataset):
         for s in string_array:
             self.total_file.append(s[1])
             self.total_label.append(map0.get(s[0]))
-
-
 
     def tokenize(self, text):
         # 具体要过滤掉哪些字符要看你的文本质量如何
@@ -96,11 +101,10 @@ class BertClassificationModel(nn.Module):
         self.tokenizer = DistilBertTokenizer.from_pretrained(model_name)
         self.bert = DistilBertModel.from_pretrained(model_name)
 
-
         # 冻结bert参数，因为我要训练的是新的全连接层，不用训练预训练模型。这样做可以防止破坏预训练模型的特点
         # for p in self.bert.parameters():
         #     p.requires_grad = False
-        self.fc = nn.Linear(hidden_size, 8)
+        self.fc = nn.Linear(hidden_size, 14)
 
     # 这个方法代表数据的流动：数据在神经网络模型中的传递过程，从输入层开始，经过一系列变换，最终到达输出层并生成结果
     def forward(self, batch_sentences):
@@ -133,14 +137,15 @@ class BertClassificationModel(nn.Module):
         return fc_out
     # 返回最终分类结果
 
+
 def main():
     trainNumber = 15611
-    testNumber = 800
+    testNumber = 9890
     # 定义每次放多少个数据参加训练
-    batchsize = 200
+    batchsize = 500
 
-    trainDatas = ATISDataset(mode="train", trainNumber=trainNumber)
-    testDatas = ATISDataset(mode="test", testNumber=testNumber)
+    trainDatas = DSTC2Dataset(mode="train", trainNumber=trainNumber)
+    testDatas = DSTC2Dataset(mode="test", testNumber=testNumber)
 
     # 遍历train_loader/test_loader 每次返回batch_size条数据
     train_loader = torch.utils.data.DataLoader(trainDatas, batch_size=batchsize, shuffle=False)
@@ -156,7 +161,6 @@ def main():
 
     # 初始化评估
     model.eval()
-
 
     num = 0
     # 不启用 BatchNormalization 和 Dropout，保证BN和dropout不发生变化,主要是在测试场景下使用
@@ -237,7 +241,7 @@ def main():
 
     print('保存模型')
     # 保存模型
-    torch.save(model.state_dict(), os.path.join(model_path, 'bert_sentiment_analysis.pth'))
+    torch.save(model.state_dict(), os.path.join(model_path, 'bert_DSTC2_analysis.pth'))
 
 
 if __name__ == '__main__':
