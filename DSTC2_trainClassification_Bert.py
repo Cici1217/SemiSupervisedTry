@@ -1,5 +1,4 @@
 # _*_ coding:utf-8 _*_
-# 利用深度学习做情感分析，基于Imdb 的50000个电影评论数据进行；
 import datetime
 import csv
 import torch
@@ -56,8 +55,6 @@ class DSTC2Dataset(Dataset):
         with open(file_path, 'r') as file:
             csv_reader = csv.reader(file)
             for row in csv_reader:
-                if len(string_array) == trainNumber:
-                    break
                 string_array.append(row)
 
         self.total_file = []
@@ -142,10 +139,10 @@ def main():
     trainNumber = 15611
     testNumber = 9890
     # 定义每次放多少个数据参加训练
-    batchsize = 500
+    batchsize = 1000
 
-    trainDatas = DSTC2Dataset(mode="train", trainNumber=trainNumber)
-    testDatas = DSTC2Dataset(mode="test", testNumber=testNumber)
+    trainDatas = DSTC2Dataset(mode="train", trainNumber=trainNumber, testNumber=testNumber)
+    testDatas = DSTC2Dataset(mode="test", trainNumber=trainNumber, testNumber=testNumber)
 
     # 遍历train_loader/test_loader 每次返回batch_size条数据
     train_loader = torch.utils.data.DataLoader(trainDatas, batch_size=batchsize, shuffle=False)
@@ -192,7 +189,7 @@ def main():
 
     # 这里搭建训练循环，输出训练结果
     # 设置循环多少次训练
-    epoch_num = 5
+    epoch_num = 1
     # 调整model为train模式
     model.train()
     # 循环训练

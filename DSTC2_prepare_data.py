@@ -1,6 +1,9 @@
 # 在rasa/data/file中，遍历全部的label（用户说的话）
+import csv
 import json
+import pandas as pd
 import os
+from sklearn.utils import shuffle
 import re
 import sys
 
@@ -66,6 +69,8 @@ def trainDataToCsv():
             tmp = key + ", " + e
             print(tmp)
     file.close()
+    csvFileRandom("file/DSTC2_csv/train_data.csv")
+
 
 def testDataToCsv():
     file = open("file/DSTC2_csv/test_data.csv", "w")
@@ -111,6 +116,28 @@ def testDataToCsv():
             tmp = key + ", " + e
             print(tmp)
     file.close()
+    csvFileRandom("file/DSTC2_csv/test_data.csv")
+
+
+def csvFileRandom(file_path):
+    data = pd.read_csv(file_path)
+    data = shuffle(data)
+    data.to_csv(file_path)
+    modified_content = []
+    with open(file_path, mode='r', encoding='utf-8') as csv_file:
+        csv_reader = csv.reader(csv_file)
+        for row in csv_reader:
+            # 去除第一个元素并保存修改后的行
+            modified_content.append(row[1:])
+    with open(file_path, mode='w', encoding='utf-8', newline='') as csv_file:
+        csv_writer = csv.writer(csv_file)
+        for row in modified_content:
+            csv_writer.writerow(row)
+
+
+
+
+
 
 if __name__ == '__main__':
     # trainDataToCsv()
