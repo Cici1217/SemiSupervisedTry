@@ -5,10 +5,9 @@ import torch
 from torch.utils.data import DataLoader, Dataset
 import os
 import re
-from random import sample
 import torch.nn as nn
 import torch.optim as optim
-from transformers import DistilBertTokenizer, DistilBertModel
+from transformers import DistilBertTokenizer, DistilBertModel, BertTokenizer
 
 # 个人理解
 # 特征提取：BERT模型首先将字符串（文本数据）通过其内置的分词器转换为一系列整数（token
@@ -135,11 +134,116 @@ class BertClassificationModel(nn.Module):
     # 返回最终分类结果
 
 
+def SemiSupervised0():
+    # 加载训练好的模型
+    model = BertClassificationModel()
+    model.load_state_dict(torch.load('model/bert_DSTC2_analysis.pth'))
+    model.eval()  # 设置为评估模式
+
+    # # 加载BERT的分词器
+    # tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+
+    # # 待预测的字符串
+    # text = "Your sample text here"
+    labels = []
+    texts = []
+    with open('file/DSTC2_csv/no_labeled_data.csv', 'r', encoding='utf-8') as csvfile:
+        # 创建 CSV 读取器
+        csvreader = csv.reader(csvfile)
+
+        # 遍历 CSV 文件中的每一行
+        for row in csvreader:
+            # 将每一行分割成标签和待预测的字符串
+            # 假设每一行的格式为 "标签, 待预测字符串"
+            # label, text = row[0].split(',', 1)
+            label = row[0]
+            text = row[1]
+
+            # 将标签和待预测的字符串添加到对应的列表中
+            labels.append(label.strip())
+            texts.append(text.strip())
+
+    # output = model(tuple(texts))
+    # out = output.argmax(dim=1)
+
+    # 经运行，发现 texts 是一个很大的列表，需要分批次处理
+    # 定义一个批次大小
+    batch_size = 100
+
+    pridict_label = []
+    keys = ['inform', 'request', 'thankyou', 'repeat', 'reqalts', 'affirm', 'negate', 'hello', 'bye', 'restart',
+            'confirm',
+            'ack', 'deny', 'null()']
+
+    # 使用 range 函数和 batch_size 来创建一个循环，以便分批次处理 texts
+    for i in range(0, len(texts), batch_size):
+        # 选取当前批次的数据
+        batch_texts = texts[i:i + batch_size]
+
+        # 将当前批次的数据转换为元组，然后传递给模型
+        output = model(tuple(batch_texts))
+
+        out = output.argmax(dim=1)
+        for value in out:
+            # 打印每个元素的值
+            temp = value.item()
+            index = int(temp)
+            pridict_label.append(keys[index])
+        # print(pridict_label)
+
+    # 在所有批次处理完成后，可以使用 torch.cat 方法将所有批次的输出拼接起来
+    # 假设模型的输出是一个张量
+
+    with open('file/DSTC2_csv/train_data_after_semi.csv', 'r', encoding='utf-8') as file:
+        reader = csv.reader(file)
+        original_rows = list(reader)  # 存储源文件的所有行
+
+
+    for i in range(0, len(pridict_label)):
+        original_rows.append([pridict_label[i], texts[i]])
+
+    with open('file/DSTC2_csv/train_data_after_semi.csv', 'w', encoding='utf-8', newline='') as file:
+        writer = csv.writer(file)
+
+        # 第三步：将 original_rows 写入文件
+        writer.writerows(original_rows)
+
+    return
+
+
 def main():
-    trainNumber = 15611
-    testNumber = 9890
+    # trainMode()
+    SemiSupervised0()
+
+
+def trainMode():
+    trainNumber, testNumber, batchsize, train_loader, test_loader = initData(15611, 9890, 1000)
+
+    # 初始化模型
+    model = BertClassificationModel()
+
+    # 初始化评估
+    print('模型数据已经加载完成，预训练评估')
+    verifyModelAcc(model, test_loader, batchsize, testNumber)
+
+    # 训练模型
+    print("预测试已完成,现在开始模型训练。")
+    trainModel(model, 1, train_loader)
+
+    # 训练后评估
+    print("模型训练已完成，对当前模型进行评估")
+    verifyModelAcc(model, test_loader, batchsize, testNumber)
+
+    print('保存模型')
+    torch.save(model.state_dict(), os.path.join(model_path, 'bert_DSTC2_analysis0.pth'))
+    return
+
+
+def initData(numTrain, numTest, size):
+    trainNumber = numTrain
+    testNumber = numTest
     # 定义每次放多少个数据参加训练
-    batchsize = 1000
+    batchsize = size
 
     trainDatas = DSTC2Dataset(mode="train", trainNumber=trainNumber, testNumber=testNumber)
     testDatas = DSTC2Dataset(mode="test", trainNumber=trainNumber, testNumber=testNumber)
@@ -147,31 +251,11 @@ def main():
     # 遍历train_loader/test_loader 每次返回batch_size条数据
     train_loader = torch.utils.data.DataLoader(trainDatas, batch_size=batchsize, shuffle=False)
     test_loader = torch.utils.data.DataLoader(testDatas, batch_size=batchsize, shuffle=False)
+    return trainNumber, testNumber, batchsize, train_loader, test_loader
 
-    print('模型数据已经加载完成，预训练评估')
 
-    now = datetime.datetime.now()
-    print(now)
-
-    # 初始化模型
-    model = BertClassificationModel()
-
-    # 初始化评估
-    model.eval()
-
-    num = 0
-    # 不启用 BatchNormalization 和 Dropout，保证BN和dropout不发生变化,主要是在测试场景下使用
-    tempNum = 1
-    for j, (data, labels) in enumerate(test_loader, 0):
-        output = model(data[0])
-        out = output.argmax(dim=1)
-        num += (out == labels[0]).sum().item()
-        print('Temp Accuracy:', num / ((tempNum) * batchsize))
-        tempNum = tempNum + 1
-    print('Accuracy:', num / testNumber)
-
-    now = datetime.datetime.now()
-    print(now)
+def trainModel(model, epoch_num, train_loader):
+    # 设置循环多少次训练
 
     # 首先定义优化器，这里用的AdamW，lr是学习率，因为bert用的就是这个
     optimizer = optim.AdamW(model.parameters(), lr=5e-5)
@@ -182,14 +266,11 @@ def main():
 
     # 这里是定义损失函数，交叉熵损失函数，常用解决分类问题
     criterion = nn.CrossEntropyLoss()
-
-    print("预测试已完成,现在开始模型训练。")
     now = datetime.datetime.now()
     print(now)
 
     # 这里搭建训练循环，输出训练结果
-    # 设置循环多少次训练
-    epoch_num = 1
+
     # 调整model为train模式
     model.train()
     # 循环训练
@@ -213,9 +294,11 @@ def main():
 
     now = datetime.datetime.now()
     print(now)
+    return
 
-    # 下面开始测试模型是不是好用哈
-    print('新模型准确率验证')
+
+def verifyModelAcc(model, test_loader, batchsize, testNumber):
+    print('当前模型准确率验证')
     now = datetime.datetime.now()
     print(now)
 
@@ -227,7 +310,8 @@ def main():
     for j, (data, labels) in enumerate(test_loader, 0):
         output = model(data[0])
         out = output.argmax(dim=1)
-        print(out == labels[0])
+        # print(out == labels[0])
+        # 此处如果打印，打印的是每一个batch内的True和False
         num += (out == labels[0]).sum().item()
         print('Temp Accuracy:', num / ((tempNum) * batchsize))
         tempNum = tempNum + 1
@@ -235,10 +319,7 @@ def main():
 
     now = datetime.datetime.now()
     print(now)
-
-    print('保存模型')
-    # 保存模型
-    torch.save(model.state_dict(), os.path.join(model_path, 'bert_DSTC2_analysis.pth'))
+    return
 
 
 if __name__ == '__main__':

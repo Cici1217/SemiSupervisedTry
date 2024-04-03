@@ -134,11 +134,45 @@ def csvFileRandom(file_path):
         for row in modified_content:
             csv_writer.writerow(row)
 
+def prepare_labeled_data():
+    # 输入和输出文件的路径
+    input_file_path = 'file/DSTC2_csv/train_data.csv'
+    output_file_path = 'file/DSTC2_csv/train_data_before_label.csv'
+    output_after = 'file/DSTC2_csv/no_labeled_data.csv'
+    output_file1 = 'file/DSTC2_csv/train_data_after_semi.csv'
 
+    # 读取输入文件
+    with open(input_file_path, 'r', encoding='utf-8') as input_file:
+        reader = csv.reader(input_file)
 
+        # 将所有行读入一个列表中
+        rows = list(reader)
+
+    # 计算应保留的行数（前一半）
+    half_row_count = len(rows) // 2
+
+    # 保存前一半的内容到输出文件
+    with open(output_file_path, 'w', encoding='utf-8', newline='') as output_file:
+        writer = csv.writer(output_file)
+
+        # 写入前一半的行
+        writer.writerows(rows[:half_row_count])
+    with open(output_file1, 'w', encoding='utf-8', newline='') as output_file_new:
+        writer = csv.writer(output_file_new)
+
+        # 写入前一半的行
+        writer.writerows(rows[:half_row_count])
+
+    # 保存后一半的内容到另一个输出文件
+    with open(output_after, 'w', encoding='utf-8', newline='') as output_file_after:
+        writer = csv.writer(output_file_after)
+
+        # 写入后一半的行
+        writer.writerows(rows[half_row_count:])
 
 
 
 if __name__ == '__main__':
     # trainDataToCsv()
-    testDataToCsv()
+    # testDataToCsv()
+    prepare_labeled_data()
