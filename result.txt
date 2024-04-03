@@ -1,3 +1,5 @@
+这个使用ATIS进行训练的
+
 #### 全监督，意图识别，无任何调优，冻结参数，调全连接层：
 
 (bert_env) cq@hello-PowerEdge-T640:~/snap/snapd-desktop-integration/test/airProj$ python [newCode.py](http://newCode.py)
